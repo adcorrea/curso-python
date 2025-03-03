@@ -24,6 +24,7 @@
 
 ## Unittest e TDD
 - mod594: unittest 
+- mod596: mock
 
 </br>
 
@@ -37,4 +38,12 @@ https://docs.python.org/3/py-modindex.html
 ## Formatação no Github
 
 https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+
+## doctest
+
+https://docs.python.org/3/library/doctest.html
+
+## unittest
+
+https://docs.python.org/3/library/unittest.html
 
