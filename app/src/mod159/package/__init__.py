@@ -1,0 +1,1 @@
+from package.modulo import soma, variavel, variavel2, hello_world
