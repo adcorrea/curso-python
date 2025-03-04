@@ -28,6 +28,9 @@
 
 </br>
 
+## Type Hints
+- mod598: Type Hints: Primitivos, sequencias, dicionarios e conjuntos, funções, classe e user types
+
 # Referencias
 
 ## Módulos padrão do Python
