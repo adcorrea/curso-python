@@ -10,6 +10,9 @@ Na classe o self é a própria instância
 """
 
 class Carro:
+    
+    # o primeiro parametro dos métodos é sempre a instancia da classe
+    # self é um nome de convenção, mas pode ser qualquer nome
     def __init__(self, nome=None):
         self.nome = nome
 

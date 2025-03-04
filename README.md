@@ -24,6 +24,12 @@
 
 ## Introdução a Programação Orientada a Objetos - POO
 - mod199: Classe e instância de classe
+- mod200: Métodos em intâncias de classe
+- mod201: Entendendo Self da classe
+- mod202: Escopo da classe e de métodos da classe
+- mod203: Mantendo estados dentro da classe
+- mod204: Atributos de classe
+- mod205: __dict__ e vars para atributos de instância
 
 </br>
 
