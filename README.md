@@ -30,6 +30,7 @@
 - mod203: Mantendo estados dentro da classe
 - mod204: Atributos de classe
 - mod205: __dict__ e vars para atributos de instância
+- mod209: Métodos de classe + factories
 
 </br>
 

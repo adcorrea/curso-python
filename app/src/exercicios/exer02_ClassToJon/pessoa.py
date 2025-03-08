@@ -19,21 +19,17 @@ class Pessoa:
         with open (self.PATH_TOJSON, 'w', encoding='utf8') as arquivo:
             json.dump(vars(self), arquivo, ensure_ascii=False, indent=2)
 
-    def fromJson(self):
-        with open(self.PATH_FROMJSON, 'r', encoding='utf8') as arquivo:
+    @classmethod
+    def fromJson(cls):
+        with open(cls.PATH_FROMJSON, 'r', encoding='utf8') as arquivo:
             pessoa = json.load(arquivo)
-            self.nome = pessoa['nome']
-            self.idade = pessoa['idade']
+            return cls(pessoa['nome'], pessoa['idade'])
 
 
 if __name__ == '__main__':
     oPessoa = Pessoa('Junior', 38)
     oPessoa.toJson()
 
-    oPessoa.fromJson()
+    instacia_P = Pessoa.fromJson()
 
-    print(vars(oPessoa))
-
-    # print(__file__)
-    # print( os.path.dirname(__file__))
-    # print(os.path.abspath(os.path.dirname(__file__)))
+    print(vars(instacia_P))
