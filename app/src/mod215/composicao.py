@@ -31,13 +31,15 @@ class Endereco:
     def __del__(self):
         print(f'apagando endereco {self.rua} {self.numero}')
 
-cliente = Cliente('Maria')
-cliente.inserir_endereco('Rua 01', '01')
-cliente.inserir_endereco('Rua 02', '01')
-cliente.listar_enderecos()
 
-endereco = Endereco('Avenida', '1000')
+if __name__ == '__main__':
+    cliente = Cliente('Maria')
+    cliente.inserir_endereco('Rua 01', '01')
+    cliente.inserir_endereco('Rua 02', '01')
+    cliente.listar_enderecos()
 
-del cliente
+    endereco = Endereco('Avenida', '1000')
 
-print('#### Acabou o programa #####')
+    del cliente
+
+    print('#### Acabou o programa #####')

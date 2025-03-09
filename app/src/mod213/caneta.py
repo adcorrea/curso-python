@@ -1,5 +1,5 @@
 """
-@property - um getter no modo Pythonico
+@property + @setter - um getter e setter no modo Pythonico
 
 getter - um método para obter um atributo modo pythonico - modo Pythonico de fazer
 as coisas.
@@ -17,24 +17,23 @@ Geralmente é usada nas seguintes situações:
 
 class Caneta:
     def __init__(self, cor) -> None:
-        self.cor_tinta = cor
+        #atributos com _ ou __ não devem ser utilizados.
+        self._cor = cor
 
     def get_cor(self):
         return self.cor
     
     @property
     def cor(self):
-        return self.cor_tinta
+        return self._cor
     
-    @property
-    def cor_tampa(self):
-        return '123'
+    @cor.setter
+    def cor(self, valor):
+       self._cor = valor
     
 
-caneta = Caneta('Azul')
+if __name__ == '__main__':
+    caneta = Caneta('Azul')
+    caneta.cor = 'Vermelha'
 
-print(caneta.get_cor())
-
-print(caneta.cor)
-print(caneta.cor_tampa)
-
+    print(caneta.cor)

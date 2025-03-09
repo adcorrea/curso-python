@@ -17,24 +17,24 @@ Geralmente é usada nas seguintes situações:
 
 class Caneta:
     def __init__(self, cor) -> None:
-        #atributos com _ ou __ não devem ser utilizados.
-        self._cor = cor
+        self.cor_tinta = cor
 
     def get_cor(self):
         return self.cor
     
     @property
     def cor(self):
-        return self._cor
+        return self.cor_tinta
     
-    @cor.setter
-    def cor(self, valor):
-       self._cor = valor
+    @property
+    def cor_tampa(self):
+        return '123'
     
+if __name__ == '__main__':
+    caneta = Caneta('Azul')
 
-    
+    print(caneta.get_cor())
 
-caneta = Caneta('Azul')
-caneta.cor = 'Vermelha'
+    print(caneta.cor)
+    print(caneta.cor_tampa)
 
-print(caneta.cor)
