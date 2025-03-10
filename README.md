@@ -37,7 +37,9 @@
 - mod213: @property + @setter - um getter e setter no modo Pythonico
 - mod214: Encapsulamento (modificadores de acesso: public, _protected, __private)
 - mod215: Relações entre classes: associação, agregação e composição
-- mod219: Herança simple - Relações entre classes
+- mod219: Herança simples - Relações entre classes
+- mod221: Sobreposicao de métodos
+- mod223: Herança Múltipla
 
 </br>
 
