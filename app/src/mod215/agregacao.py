@@ -23,8 +23,12 @@ class Carrinho:
     
 
     def listar_produtos(self):
+        total = 0.0
         for produto in self._produtos:
             print(produto.nome, produto.preco)
+            total += produto.preco
+
+        print(f'==> TOTAL: {total}')
 
 
 class Produto():
@@ -32,12 +36,13 @@ class Produto():
         self.nome = nome
         self.preco = preco
 
-carrinho = Carrinho()
+if __name__ == '__main__':
+    carrinho = Carrinho()
 
-p1, p2 = Produto('Caneta', 1.20), Produto('Camiseta', 20)
+    p1, p2 = Produto('Caneta', 1.20), Produto('Camiseta', 20)
 
-carrinho.inserir_produtos(p1, p2)
-carrinho.listar_produtos()
+    carrinho.inserir_produtos(p1, p2)
+    carrinho.listar_produtos()
 
 
 

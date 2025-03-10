@@ -30,6 +30,14 @@
 - mod203: Mantendo estados dentro da classe
 - mod204: Atributos de classe
 - mod205: __dict__ e vars para atributos de instância
+- mod209: Métodos de classe + factories
+- mod210: Static Method
+- mod211: Instance Method x Class Method x Static Method
+- mod212: @property - um getter no modo pythonico
+- mod213: @property + @setter - um getter e setter no modo Pythonico
+- mod214: Encapsulamento (modificadores de acesso: public, _protected, __private)
+- mod215: Relações entre classes: associação, agregação e composição
+- mod219: Herança simple - Relações entre classes
 
 </br>
 

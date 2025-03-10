@@ -29,16 +29,22 @@ class Connection():
         return connection
     
     @staticmethod
-    def soma(x, y):
-        return x + y
-
-c1 = Connection()
-c1.set_user('adcorrea')
-c1.set_password('123')
-print(vars(c1))
+    def log(msg):
+        print(f'INFO: {msg}')
 
 
-c2 = Connection.create_with_auth('lsampa', '233')
-print(vars(c2))
 
-print(Connection.soma(1,2))
+if __name__ == '__main__':
+
+    Connection.log('INICIO')
+    
+    c1 = Connection()
+    c1.set_user('adcorrea')
+    c1.set_password('123')
+    print(vars(c1))
+
+
+    c2 = Connection.create_with_auth('lsampa', '233')
+    print(vars(c2))
+
+    Connection.log('FIM')

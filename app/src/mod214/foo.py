@@ -34,6 +34,7 @@ class Foo:
     def __metodo_private(self):
         return '__metodo_private'
 
-f = Foo()
-print(f._protected)
-print(f._Foo__metodo_private())
+if __name__ == '__main__':
+    f = Foo()
+    print(f._protected)
+    print(f._Foo__metodo_private())

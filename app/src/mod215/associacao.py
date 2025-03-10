@@ -30,9 +30,9 @@ class FerramentaDeEscrever:
     def escrever(self):
         return f'{self.nome} está escrevendo'
     
+if __name__ == '__main__':
+    escritor = Escritor('Vinicius de Moraes')
+    caneta = FerramentaDeEscrever('Caneta')
 
-escritor = Escritor('Vinicius de Moraes')
-caneta = FerramentaDeEscrever('Caneta')
-
-escritor.ferramenta = caneta
-print(escritor.ferramenta.escrever())
+    escritor.ferramenta = caneta
+    print(escritor.ferramenta.escrever())

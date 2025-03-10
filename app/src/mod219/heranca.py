@@ -32,10 +32,10 @@ class Cliente(Pessoa):
 class Aluno(Pessoa):
     ...
 
+if __name__ == '__main__':
+    c1 = Cliente('Luiz', 'Otavio')
+    c1.nome_classe()
 
-c1 = Cliente('Luiz', 'Otavio')
-c1.nome_classe()
-
-c2 = Aluno('Maria', 'Helena')
-c2.nome_classe()
-help(Cliente)
+    c2 = Aluno('Maria', 'Helena')
+    c2.nome_classe()
+    help(Cliente)
