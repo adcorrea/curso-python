@@ -40,6 +40,7 @@
 - mod219: Herança simples - Relações entre classes
 - mod221: Sobreposicao de métodos
 - mod223: Herança Múltipla
+- mod225: Abstração
 
 </br>
 
