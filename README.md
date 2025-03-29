@@ -41,7 +41,12 @@
 - mod221: Sobreposicao de métodos
 - mod223: Herança Múltipla
 - mod225: Herança Múltipla e Mixin
-- mod228: Classes abstratas
+- mod229: Classes abstratas
+- mod230: abstractmethod para qualquer método já decorado
+- mod231: Polimorfismo em Python Orientado a Objetos (Teoria)
+- mod232: Polimorfismo em Python Orientado a Objetos (Código)
+- mod233: Criando Exceptions em Python Orientado a Objetos
+- mod236: Python Special Methods, Magic Methods ou Dunder Methods
 
 </br>
 
