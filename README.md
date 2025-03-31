@@ -47,6 +47,12 @@
 - mod232: Polimorfismo em Python Orientado a Objetos (Código)
 - mod233: Criando Exceptions em Python Orientado a Objetos
 - mod236: Python Special Methods, Magic Methods ou Dunder Methods
+- mod239: __new__ e __init__ em classes Python
+- mod240: Context Manager com classes
+- mod243: Funções decoradoras e decoradores com classes
+- mod245: Método especial __call__
+- mod246: Classes decoradoras (Decorator Classes)
+- mod247: Metaclasses
 
 </br>
 

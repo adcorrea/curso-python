@@ -21,27 +21,35 @@
 
 
 class Ponto:
-    def __init__(self, x, y, z='String'):
+    def __init__(self, x, y):
         self.x = x
         self.y = y
-        self.z = z
 
-    # o str sobrepóe o __repr__
-    def __str__(self):
-        return f'({self.x}, {self.y}, {self.z})'
 
     # __repr__ é a representação do objeto
     def __repr__(self):
         class_name = type(self).__name__
-        return f'{class_name}({self.x!r}, {self.y!r}, {self.z!r})'
+        return f'{class_name}({self.x!r}, {self.y!r})'
+    
+    def __add__(self, other):
+        novo_x = self.x + other.x
+        novo_y = self.y + other.y
+
+        return Ponto(novo_x, novo_y)
+    
+    def __gt__(self, other):
+        resultado_self = self.x + self.y
+        resultado_other = other.x + other.y
+        return resultado_self > resultado_other
 
 
 if __name__ == '__main__':
-    p1 = Ponto(1, 2)
-    p2 = Ponto(978, 876)
+   p1 = Ponto(4, 2)
+   p2 = Ponto(6, 4)
 
-    print(p1)
+   p3 = p1 + p2
 
-    # formas de invocar o repr
-    print(repr(p2))
-    print(f'{p2!r}')
+   print(p3)
+
+   print('P1 é maior que p2', p1 > p2)
+   print('P2 é maior que P1', p2 > p1)
