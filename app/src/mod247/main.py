@@ -5,7 +5,7 @@
 # Então, qual é o tipo de uma classe? (type)
 # Seu objeto é uma instância da sua classe.
 
-# Sua classe ´uma instância de type (type é uma metaclass)
+# Sua classe é uma instância de type (type é uma metaclass)
 # type('Name', (Bases, ), __dict__)
 
 
@@ -25,3 +25,51 @@
 # que realmente precisam delas sabem com certeza que precisam delas e não precisam
 # de uma explicação sobre o porquê)."
 #     - tim Peters (CPython Core Developer)
+
+
+def meu_repr(self):
+    class_name = self.__class__.__name__
+    class_dict = self.__dict__
+    class_repr = f'{class_name}({class_dict})'
+    return class_repr
+
+
+class Meta(type):
+    def __new__(mcs, name, bases, dct):
+        print('METACLASS NEW')
+        cls = super().__new__(mcs, name, bases, dct)
+        cls.__repr__ = meu_repr
+
+        if 'falar' not in cls.__dict__ or not callable(cls.__dict__['falar']):
+            raise NotImplementedError('metódo falar não foi implementado')
+
+        return cls
+    
+    def __call__(self, *args, **kwds):
+        instancia = super().__call__(*args, **kwds)
+        print(instancia.__dict__)
+        if 'nome' not in instancia.__dict__:
+            raise AttributeError('nome não existe na instancia')
+        
+        return instancia
+
+
+
+
+class Pessoa(metaclass=Meta):
+    def __new__(cls, *args, **kwargs):
+        print('MEU NEW')
+        instancia = super().__new__(cls)
+        return instancia
+    
+    def __init__(self, nome):
+        print('MEU INIT')
+        self.nome = nome
+
+    def falar():
+        print('Oi')
+
+
+if __name__ == '__main__':
+    p1 = Pessoa('Junior')
+    print(p1.__repr__())

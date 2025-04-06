@@ -53,6 +53,7 @@
 - mod245: Método especial __call__
 - mod246: Classes decoradoras (Decorator Classes)
 - mod247: Metaclasses
+- mod254: Enums: Enumerações
 
 </br>
 
