@@ -37,7 +37,23 @@
 - mod213: @property + @setter - um getter e setter no modo Pythonico
 - mod214: Encapsulamento (modificadores de acesso: public, _protected, __private)
 - mod215: Relações entre classes: associação, agregação e composição
-- mod219: Herança simple - Relações entre classes
+- mod219: Herança simples - Relações entre classes
+- mod221: Sobreposicao de métodos
+- mod223: Herança Múltipla
+- mod225: Herança Múltipla e Mixin
+- mod229: Classes abstratas
+- mod230: abstractmethod para qualquer método já decorado
+- mod231: Polimorfismo em Python Orientado a Objetos (Teoria)
+- mod232: Polimorfismo em Python Orientado a Objetos (Código)
+- mod233: Criando Exceptions em Python Orientado a Objetos
+- mod236: Python Special Methods, Magic Methods ou Dunder Methods
+- mod239: __new__ e __init__ em classes Python
+- mod240: Context Manager com classes
+- mod243: Funções decoradoras e decoradores com classes
+- mod245: Método especial __call__
+- mod246: Classes decoradoras (Decorator Classes)
+- mod247: Metaclasses
+- mod254: Enums: Enumerações
 
 </br>
 
