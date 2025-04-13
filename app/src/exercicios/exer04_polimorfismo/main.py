@@ -40,7 +40,7 @@
 # Banco autentica por um método.
 
 from banco.banco import Banco
-from banco.conta import ContaCorrente, ContaPoupança
+from banco.conta import ContaCorrente, ContaPoupanca
 from banco.pessoa import Cliente
 from banco.excecoes import SaldoInsuficienteError, AutenticacaoErro
 
@@ -57,7 +57,7 @@ if __name__ == '__main__':
     banco_bamerindus.incluir_cliente(correntista)
 
     correntista_poupanca = Cliente('Chuck Norris', '12234', 65)
-    conta_poupanca = ContaPoupança('123', '3654')
+    conta_poupanca = ContaPoupanca('123', '3654')
     correntista_poupanca.abrir_conta(conta_poupanca)
 
     banco_bamerindus.incluir_cliente(correntista_poupanca)
