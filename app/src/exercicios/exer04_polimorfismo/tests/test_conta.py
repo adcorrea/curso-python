@@ -57,6 +57,26 @@ class TestConta (unittest.TestCase):
         with self.assertRaises(SaldoInsuficienteError):
             self.conta_corrente.sacar(500)
 
+    def test_conta_corrente_mostrar_saldo(self):
+        from io import StringIO
+
+        self.conta_corrente.depositar(500.00)
+
+        try:
+            # Cria um objeto StringIO para capturar a saída
+            saida_capturada = StringIO()
+            sys.stdout = saida_capturada  # Redireciona sys.stdout para o objeto StringIO
+            # Chama a função que você quer testar
+            self.conta_corrente.mostrar_saldo()
+            # Resgata o valor capturado e remove a quebra de linha (se necessário)
+            saida_capturada.seek(0)
+            saida = saida_capturada.read().strip()
+            # Verifica se a saída está correta
+            self.assertIn("500",saida)
+        finally:
+            # Restaura sys.stdout para evitar problemas em outros testes
+            sys.stdout = sys.__stdout__
+
 
     # TESTE DE CONTA POUPANÇA
     def test_instancia_de_conta_poupanca_e_conta(self):
@@ -83,8 +103,29 @@ class TestConta (unittest.TestCase):
         
         with self.assertRaises(SaldoInsuficienteError):
             self.conta_poupanca.sacar(100.00)
-
     
+
+
+    def test_conta_poupanca_mostrar_saldo(self):
+        from io import StringIO
+        
+        self.conta_poupanca.depositar(500.00)
+
+        try:
+            # Cria um objeto StringIO para capturar a saída
+            saida_capturada = StringIO()
+            sys.stdout = saida_capturada  # Redireciona sys.stdout para o objeto StringIO
+            # Chama a função que você quer testar
+            self.conta_poupanca.mostrar_saldo()
+            # Resgata o valor capturado e remove a quebra de linha (se necessário)
+            saida_capturada.seek(0)
+            saida = saida_capturada.read().strip()
+            # Verifica se a saída está correta
+            self.assertIn("500",saida)
+        finally:
+            # Restaura sys.stdout para evitar problemas em outros testes
+            sys.stdout = sys.__stdout__
+
 
 
 if __name__ == '__main__':
