@@ -12,7 +12,7 @@ from banco.conta import ContaCorrente, ContaPoupanca
 class TestPessoa (unittest.TestCase):
 
     def setUp(self):
-        self.cliente = Cliente(cpf='3612644870', nome='Antonio Junior', idade=38)
+        self.cliente = Cliente(cpf='58978999', nome='Antonio Junior', idade=38)
 
 
     def test_cliente_instancia_pessoa_e_cliente(self):
