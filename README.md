@@ -54,6 +54,7 @@
 - mod246: Classes decoradoras (Decorator Classes)
 - mod247: Metaclasses
 - mod254: Enums: Enumerações
+- mod265: dataclasses - o que são dataclasses?
 
 </br>
 

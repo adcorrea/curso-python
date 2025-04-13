@@ -25,7 +25,7 @@ class Conta (ABC):
         return self._saldo
     
     @numero.setter
-    def conta(self, numero: str) -> None:
+    def numero(self, numero: str) -> None:
         self._numero = numero
 
     @agencia.setter
@@ -46,8 +46,8 @@ class Conta (ABC):
 
 class ContaCorrente(Conta):
 
-    def __init__(self, agencia: str, conta: str, limite_extra: float = 0.00):
-        super().__init__(agencia, conta)
+    def __init__(self, agencia: str, numero: str, limite_extra: float = 0.00):
+        super().__init__(agencia, numero)
         self._limite_extra = limite_extra
 
     @property
@@ -69,7 +69,7 @@ class ContaCorrente(Conta):
         self.mostrar_saldo()
 
 
-class ContaPoupança(Conta):
+class ContaPoupanca(Conta):
 
     def sacar(self, valor: float) -> None:
         print(f'Sacando {valor}...')
